@@ -22,8 +22,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://39.107.126.70:3306/sign
-    username: root
-    password: 123456
+    username: ####
+    password: ####
     # Druid连接池配置
     type: com.alibaba.druid.pool.DruidDataSource
     # 初始化
