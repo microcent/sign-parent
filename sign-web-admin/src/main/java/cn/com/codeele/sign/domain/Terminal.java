@@ -8,11 +8,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "t_machine")
+@Table(name = "t_terminal")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Machine implements Serializable {
+public class Terminal implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

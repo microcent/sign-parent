@@ -11,20 +11,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/user")
-@Api(value = "用户模块", description = "用户模块")
-public class LoginController {
+import java.util.Map;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
+@RestController
+@RequestMapping("/ui")
+@Api(value = "UI模块", description = "UI模块")
+public class UiController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(UiController.class);
 
     @Autowired
     private TerminalService terminalService;
 
-    @ApiOperation(value = "用户登录", notes = "")
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ResponseEntity<?> login() {
-        return ResponseEntity.ok().build();
+    @ApiOperation(value = "获取UI配置", notes = "")
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public ResponseEntity<?> index() {
+        Map<String,Integer> map=  this.terminalService.find("");
+        return ResponseEntity.ok(map);
     }
 
 }
