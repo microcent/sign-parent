@@ -1,5 +1,6 @@
 package cn.com.codeele.sign.controller;
 
+import cn.com.codeele.sign.entity.Response;
 import cn.com.codeele.sign.service.TerminalService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,9 +26,9 @@ public class UiController {
 
     @ApiOperation(value = "获取UI配置", notes = "")
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public ResponseEntity<?> index() {
-        Map<String,Integer> map=  this.terminalService.find("");
-        return ResponseEntity.ok(map);
+    public Response index() {
+        Map<String, Integer> map = this.terminalService.find("");
+        return Response.success(map);
     }
 
 }

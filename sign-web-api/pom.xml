@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sign-web-admin</artifactId>
+    <artifactId>sign-web-api</artifactId>
 
-    <name>sign-web-admin</name>
+    <name>sign-web-api</name>
 
     <dependencies>
         <dependency>
