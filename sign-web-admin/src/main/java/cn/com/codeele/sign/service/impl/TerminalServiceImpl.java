@@ -6,6 +6,8 @@ import cn.com.codeele.sign.repository.SystemPropertyRepository;
 import cn.com.codeele.sign.repository.TerminalRepository;
 import cn.com.codeele.sign.service.TerminalService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -29,4 +31,8 @@ public class TerminalServiceImpl implements TerminalService {
         return map;
     }
 
+    @Override
+    public Page<Terminal> findAll(Pageable pageable) {
+        return this.terminalRepository.findAll(pageable);
+    }
 }

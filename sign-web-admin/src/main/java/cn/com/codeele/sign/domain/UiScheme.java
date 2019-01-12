@@ -16,7 +16,7 @@ public class UiScheme implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column
     private int id;
 
     @Column(name = "terminal_id")

@@ -16,16 +16,16 @@ public class Terminal implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column
     private int id;
 
-    @Column(name = "name")
+    @Column
     private String name;
 
-    @Column(name = "mac")
+    @Column
     private String mac;
 
-    @Column(name = "ip")
+    @Column
     private String ip;
 
     @Column(name = "create_time")

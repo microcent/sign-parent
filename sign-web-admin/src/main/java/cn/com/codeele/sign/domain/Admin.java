@@ -16,20 +16,29 @@ public class Admin implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column
     private int id;
 
-    @Column(name = "username")
+    @Column
     private String username;
 
-    @Column(name = "password")
+    @Column
     private String password;
 
-    @Column(name = "nickname")
+    @Column
     private String nickname;
 
-    @Column(name = "status")
+    @Column
     private int status;
+
+    @Column
+    private String avatar;
+
+    @Column(name = "last_login_time")
+    private Long lastLoginTime;
+
+    @Column(name = "last_login_ip")
+    private String lastLoginIp;
 
     @Column(name = "create_time")
     private long createTime;

@@ -22,6 +22,9 @@ public class SystemProperty implements Serializable {
     private String propertyKey;
 
     @Column
+    private String caption;
+
+    @Column
     private String value;
 
     @Column
